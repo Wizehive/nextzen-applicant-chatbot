@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>NextZen Applicant Chatbot Widget Test Page</title>
   <style>
+
     body {
       font-family: Arial, sans-serif;
       padding: 2rem;
@@ -28,8 +29,16 @@
     li {
       margin-bottom: 0.5rem;
     }
+
+    /* Optional: prevent widget from interfering with copying */
+    * {
+      user-select: auto !important;
+    }
+    
+
   </style>
 </head>
+
 <body>
 
   <h1>🚀 Welcome to the NextZen Applicant Chatbot</h1>
@@ -38,7 +47,7 @@
   <!-- ✅ Widget Container -->
   <div id="widget-container">
     <!--<h2>Widget Area</h2> -->
-    <p>Click on the + button at the bottom right corner to launch the chatbot</p>
+    <p>Click on the chat bubble icon at the bottom right corner to launch the chatbot</p>
     <!-- Your widget script will be inserted here -->
   </div>
 
@@ -54,10 +63,10 @@
   </script>
   -->
  <div id="prompt-library">
-    <h2>💬 Try These Prompts:</h2>
-    <p>Copy any of these prompts into the widget to try them out!</p>
+  <h2>💬 Try These Sample Prompts:</h2>
+  <p>Copy any of these prompts into the widget to try them out!</p>
    
-    <h3>Application Process Questions:</h3>
+  <h3>Application Process Questions:</h3>
 <h3>Getting Started:</h3>
 <li>How do I create an account and start my application?</li>
 <li>Where do I find the application form?</li>
@@ -137,19 +146,27 @@
 <li>What if I miss the deadline due to technical issues?</li>
 <li>Can someone help me complete my application?</li>
 
-
-  </div>
+</div>
  
+
 <!--
 Paste this script at the bottom of your HTML before the </body> tag.
 See more style and config options on our docs
 https://github.com/Mintplex-Labs/anything-llm/tree/master/embed/README.md
 -->
-<script
-  data-embed-id="398b2ade-25f4-4396-be5b-c3d8451a56aa"
-  data-base-api-url="https://anythingllm-docker-production-e607.up.railway.app/api/embed"
-  src="https://anythingllm-docker-production-e607.up.railway.app/embed/anythingllm-chat-widget.min.js">
-</script>
+  <script
+      data-embed-id="398b2ade-25f4-4396-be5b-c3d8451a56aa"
+      data-base-api-url="https://anythingllm-docker-production-e607.up.railway.app/api/embed"
+
+      data-brand-image-url="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iOTlweCIgaGVpZ2h0PSIxMDFweCIgdmlld0JveD0iMCAwIDk5IDEwMSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KICAgIDwhLS0gR2VuZXJhdG9yOiBTa2V0Y2ggNTMuMiAoNzI2NDMpIC0gaHR0cHM6Ly9za2V0Y2hhcHAuY29tIC0tPgogICAgPHRpdGxlPlN1Ym1pdGljb24gb3JhbmdlIGFyZWEgUHJlc3MgYW5kIE1lZGlhPC90aXRsZT4KICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPgogICAgPGcgaWQ9IlN1Ym1pdGljb24tb3JhbmdlLWFyZWEtUHJlc3MtYW5kLU1lZGlhIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8cG9seWxpbmUgaWQ9IlBhdGgtQ29weS0yIiBmaWxsPSIjRkM1QjMwIiBwb2ludHM9Ijg2LjU3NjQ3MDYgNSA5OSA1IDk5IDEwMSAwIDEwMSAwIDUgMjEuNzM4MjgxMiA1Ij48L3BvbHlsaW5lPgogICAgICAgIDxwYXRoIGQ9Ik0zMCwyNSBMMzAsNzAuNTE4MjczMSBMNDkuNDg4ODk0OCw4MSBMNjguOTc3Nzg5Niw3MC41MTgyNzMxIEw2OC45Nzc3ODk2LDQxLjE2NTM2MTQgTDY4Ljk0NTE2ODIsNDEuMTY1MzYxNCBMNTAuMTg0MzU2NiwyNS4wODU3NDMgTDUwLjE4NDM1NjYsNDEuMTY1MzYxNCBMNjIuNjI2MzIxNCw0MS4xNjUzNjE0IEw2Mi42MjYzMjE0LDY2LjY1MDcwMjggTDQ5LjQ4ODg5NDgsNzMuNzE3NDY5OSBMMzYuMzQ3MzAzOCw2Ni42NTA3MDI4IEwzNi4zNDczMDM4LDMxLjQzNjM0NTQgTDQ2LjAyMTMwMjcsMzEuNDM2MzQ1NCBMNDYuMDIxMzAyNywyNSBMMzAsMjUgWiBNNjguOTc3Nzg5Niw0MS4xNjUzNjE0IEw2OSw0MS4xNjUzNjE0IEw2OC45Nzc3ODk2LDQxLjE2NTM2MTQgWiIgaWQ9IkZpbGwtNy1Db3B5LTIiIGZpbGw9IiNGRkZGRkYiPjwvcGF0aD4KICAgIDwvZz4KPC9zdmc+"
+      data-chat-icon="chatBubble"
+      data-button-color="#FC5B30"
+      data-no-sponsor=" "
+      data-username=" "   
+      data-send-message-text="Got a question? I’m here to help!"
+    
+      src="https://anythingllm-docker-production-e607.up.railway.app/embed/anythingllm-chat-widget.min.js">
+    </script>
 <!-- AnythingLLM (https://anythingllm.com) -->
 
 </body>
